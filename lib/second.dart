@@ -14,21 +14,25 @@ class LoginScreen extends StatelessWidget {
             padding: EdgeInsets.only(top: 20),
             child: Text("Login Page"),
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 100, right: 100, top: 10),
+           Padding(
+            padding: EdgeInsets.only(left: 80, right: 80, top: 10),
             child: TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(100)
+                  ),
                   hintText: 'User Name',
                   prefixIcon: Icon(Icons.account_circle),
                   labelText: 'USER'),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 100, right: 100, top: 10),
+           Padding(
+            padding: EdgeInsets.only(left: 80, right: 80, top: 10),
             child: TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(100)
+                  ),
                   hintText: 'Password',
                   prefixIcon: Icon(Icons.password),
                   labelText: 'PASSWORD'),
