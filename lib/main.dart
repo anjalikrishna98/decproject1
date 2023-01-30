@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:decproject1/second.dart';
 import 'package:flutter/material.dart';
 
+import 'loginpage.dart';
+
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(primarySwatch: Colors.green),
@@ -21,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     Timer(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => LoginScreen()),
+        MaterialPageRoute(builder: (context) => LoginPage()),
       );
     });
   }
