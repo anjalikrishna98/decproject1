@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:decproject1/ListDemo.dart';
 import 'package:decproject1/second.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     Timer(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => ListDemo()),
       );
     });
   }
