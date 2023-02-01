@@ -1,17 +1,25 @@
 import 'dart:async';
-
+import 'package:device_preview/device_preview.dart';
 import 'package:decproject1/ListDemo.dart';
 import 'package:decproject1/second.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'List_View_Separated.dart';
+import 'List_View_With_Builder.dart';
 import 'loginpage.dart';
 
 void main() {
-  runApp(MaterialApp(
-    theme: ThemeData(primarySwatch: Colors.green),
-    debugShowCheckedModeBanner: false,
-    home: MainScreen(),
-  ));
+  runApp(DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context){
+    return MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home:  MainScreen(),
+    );
+  }));
 }
 
 class MainScreen extends StatefulWidget {
@@ -24,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     Timer(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => ListDemo()),
+        MaterialPageRoute(builder: (context) => ListViewSeparated()),
       );
     });
   }
