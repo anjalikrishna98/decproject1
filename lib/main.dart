@@ -1,12 +1,15 @@
 import 'dart:async';
+import 'package:decproject1/snackdemo.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:decproject1/ListDemo.dart';
 import 'package:decproject1/second.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'GridView1.dart';
 import 'List_View_Separated.dart';
 import 'List_View_With_Builder.dart';
+import 'List_with_Custum.dart';
 import 'loginpage.dart';
 
 void main() {
@@ -32,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     Timer(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => ListViewSeparated()),
+        MaterialPageRoute(builder: (context) => Grid1()),
       );
     });
   }
